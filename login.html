@@ -68,85 +68,84 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <p>
-                        Download App for Android <br /> and ios mobile phone
-                    </p>
-                    <div class="app-logo">
-                        <img src="images/play-store.png" alt="" />
-                        <img src="images/app-store.png" alt="" />
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>
+                            Download App for Android <br /> and ios mobile phone
+                        </p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png" alt="" />
+                            <img src="images/app-store.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="images/logo.png" alt="" />
+                        <p>
+                            Hello <br />welcome you
+                        </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Return Policy</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-col-2">
-                    <img src="images/logo.png" alt="" />
-                    <p>
-                        Hello <br />welcome you
-                    </p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Return Policy</li>
-                    </ul>
-                </div>
-
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                        <li>YouTube</li>
-                    </ul>
-                </div>
+                <hr />
             </div>
-            <hr />
         </div>
-    </div>
 
-    <!-- JS for Toggle menu -->
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
+        <!-- JS for Toggle menu -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
 
-        MenuItems.style.maxHeight = "0px";
+            MenuItems.style.maxHeight = "0px";
 
-        function menutoggle() {
-            if (MenuItems.style.maxHeight == "0px") {
-                MenuItems.style.maxHeight = "200px";
-            } else {
-                MenuItems.style.maxHeight = "0px";
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                } else {
+                    MenuItems.style.maxHeight = "0px";
+                }
             }
-        }
-    </script>
-    <!-- 
+        </script>
+        <!-- 
   js for toggle form -->
-    <script>
-        var LoginForm = document.getElementById("LoginForm");
-        var RegForm = document.getElementById("RegForm");
-        var indicator = document.getElementById("indicator");
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var indicator = document.getElementById("indicator");
 
-        function register() {
-            RegForm.style.transform = "translateX(0px)";
-            LoginForm.style.transform = "translateX(0px)";
-            indicator.style.transform = "translateX(100px)";
-        }
+            function register() {
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                indicator.style.transform = "translateX(100px)";
+            }
 
-        function login() {
-            RegForm.style.transform = "translateX(300px)";
-            LoginForm.style.transform = "translateX(300px)";
-            indicator.style.transform = "translateX(0px)";
-        }
-    </script>
-    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" language="javascript" src="login.js"></script>
+            function login() {
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" language="javascript" src="login.js"></script>
 </body>
 
 </html>
