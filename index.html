@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nav Shopping Mart | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'>
+    <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="style.css" />
+
     <script type="text/javascript" language="javascript" src="login.js"></script>
     <script>
         function validateLogin() {
@@ -32,9 +36,12 @@
                         <li><a href="login.html">Login</a></li>
                     </ul>
                 </nav>
-                
-                <a href="cart.html"><img src="images/cart.png" alt="" width="30px" height="30px" /></a>
-                <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+                <a href="javascript:void(0);">
+                    <button class="cartbutton " onclick='sideNav(1)'>
+                        <i class='fas fa-shopping-cart' style='font-size:2rem;'></i>
+                    </button>
+                    <span class='total-qty'>0</span>
+                </a>
             </div>
             <div class="row">
                 <div class="col-2">
@@ -60,15 +67,13 @@
                         }
                     </script>
                     <h1>
-                        Give yourself a new<br />
-                        Style Everyday!
+                        Give yourself a new<br /> Style Everyday!
                     </h1>
                     <p>
-                    <h3>
-                        Who we are: We are a updated outfit brand <br /> & it's a perfect place to give yourself a
-                        new<br />
-                        Outfit with our wide range of collections!
-                    </h3>
+                        <h3>
+                            Who we are: We are a updated outfit brand <br /> & it's a perfect place to give yourself a new
+                            <br /> Outfit with our wide range of collections!
+                        </h3>
                     </p>
                 </div>
                 <div class="col-2">
@@ -77,101 +82,8 @@
             </div>
         </div>
     </div>
-    <!----- Featurd Products--------->
 
-    <div class="small-container">
-        <h2 class="title">Featured Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/gallery-1.jpg" width="20%" alt="" />
-                <h3>Item :Red T-Shirt</h3>
-                <h3>Price :Rs 500</h3>
-                <input type="number" class="count" value="1" />
-                <a href="cart.html">
-                    <button class="tiny">Add to cart</button>
-                </a>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-2.jpg" width="20%" alt="" />
-                <h3>Item : Black Shoes</h3>
-                <h3>Price :Rs 1500</h3>
-                <input type="number" class="count" value="1" />
-                <a href="cart.html">
-                    <button class="tiny">Add to cart</button>
-                </a>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-3.jpg" width="20%" alt="" />
-                <h3>Item : Track Paint</h3>
-                <h3>Price :Rs 4950</h3>
-                <input type="number" class="count" value="1" />
-                <a href="cart.html">
-                    <button class="tiny">Add to cart</button>
-                </a>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-4.jpg" width="20%" alt="" />
-                <h3>Item : Puma blue T-shirt</h3>
-                <h3>Price :Rs 5450</h3>
-                <input type="number" class="count" value="1" />
-                <a href="cart.html">
-                    <button class="tiny">Add to cart</button>
-                </a>
-            </div>
-        </div>
-        <h2 class="title">Latest Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/product-5.jpg" alt="" />
-                <h4>White Shoes</h4>
-                <p>Rs 5910</p>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-6.jpg" alt="" />
-                <h4>Balck T-shirt</h4>
-                <p>Rs 5098.00</p>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-7.jpg" alt="" />
-                <h4>HRX Shocks</h4>
-                <p>Rs 5090</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-8.jpg" alt="" />
-                <h4>Mens Watch</h4>
-                <p>Rs 8950</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/product-9.jpg" alt="" />
-                <h4>Black Wrist Watch</h4>
-                <p>Rs 2508</p>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-10.jpg" alt="" />
-                <h4>Mens Shoes</h4>
-                <p>Rs 1250</p>
-            </div>
-
-            <div class="col-4">
-                <img src="images/product-11.jpg" alt="" />
-                <h4>Mens White Shoes</h4>
-                <p>Rs 2050</p>
-            </div>
-            <div class="col-4">
-                <img src="images/product-12.jpg" alt="" />
-                <h4>Black Track Paint</h4>
-                <p>Rs 2500</p>
-            </div>
-        </div>
-    </div>
+    <div class="productcart " id='app'></div>
 
     <!-- Footer -->
     <div class="footer">
@@ -180,8 +92,7 @@
                 <div class="footer-col-1">
                     <h3>Download Our App</h3>
                     <p>
-                        Download App for Android <br />
-                        and ios mobile phone
+                        Download App for Android <br /> and ios mobile phone
                     </p>
                     <div class="app-logo">
                         <img src="images/play-store.png" alt="" />
@@ -213,7 +124,6 @@
                 </div>
             </div>
             <hr />
-            <!-- <p class="copyright">Copyright 2020 - introidx</p> -->
         </div>
     </div>
     <!-- JS for Toggle menu -->
@@ -230,18 +140,7 @@
             }
         }
     </script>
-
-    <script type="text/template" id="cartT">
-    <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
-  <%= item.count %> piece<% if(item.count > 1)
-  {%>s
-  <%}%> for <%= item.total %>₹</span > </div>
-  <% }); %>
-  </script>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
-    <script src="cart.js"></script>
+    <script src="./cart.js "></script>
 
 </body>
 

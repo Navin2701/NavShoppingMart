@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nav Shopping Mart | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'>
+    <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" language="javascript" src="login.js"></script>
 
@@ -25,8 +28,13 @@
                         <li><a href="login.html">Login</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="images/cart.png" alt="" width="30px" height="30px" /></a>
-                <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+                <a href="javascript:void(0);">
+                    <button class="cartbutton " onclick='sideNav(1)'>
+                        <i class='fas fa-shopping-cart' style='font-size:2rem;'></i>
+                    </button>
+                    <span class='total-qty'>0</span>
+
+                </a>
             </div>
         </div>
     </div>
@@ -47,22 +55,12 @@
                             <hr id="indicator" />
                         </div>
                         <form action="" id="LoginForm">
-                            <!-- <input type="text" placeholder="Username" />
-                            <input type="password" placeholder="Password" /> -->
                             <input id="userName" type="text" placeholder="Enter Username" value="" />
                             <input id="userPw" type="password" placeholder="Enter Password" value="" />
                             <input id="login_btn" type="submit" value="Login" onClick="check()" />
-
-                            <!-- <button type="submit" class="btn">Login</button> -->
                             <a href="">Forgot Password</a>
                         </form>
                         <form action="" id="RegForm">
-                            <!-- <input type="text" placeholder="Username" />
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-
-                            <button type="submit" class="btn">Register</button> -->
-
                             <input id="name1" type="text" placeholder="Name" value="" />
                             <input id="pw" type="password" placeholder="Password" value="" />
                             <input id="rgstr_btn" type="submit" value="Get Account" onClick="store()" />
@@ -79,8 +77,7 @@
                 <div class="footer-col-1">
                     <h3>Download Our App</h3>
                     <p>
-                        Download App for Android <br />
-                        and ios mobile phone
+                        Download App for Android <br /> and ios mobile phone
                     </p>
                     <div class="app-logo">
                         <img src="images/play-store.png" alt="" />
@@ -112,23 +109,8 @@
                 </div>
             </div>
             <hr />
-            <!-- <p class="copyright">Copyright 2020 - introidx</p> -->
         </div>
     </div>
-    <!-- JS for Toggle menu -->
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
-
-        MenuItems.style.maxHeight = "0px";
-
-        function menutoggle() {
-            if (MenuItems.style.maxHeight == "0px") {
-                MenuItems.style.maxHeight = "200px";
-            } else {
-                MenuItems.style.maxHeight = "0px";
-            }
-        }
-    </script>
 
     <!-- JS for Toggle menu -->
     <script>
