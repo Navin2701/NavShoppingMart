@@ -1,7 +1,7 @@
 const productDetails = [{
         name: "Red T-Shirt",
         price: 500,
-        imageUrl: '',
+        imageUrl: 'https://pixabay.com/photos/t-shirt-red-man-plain-model-1710578/',
         heading: "T-Shirt",
         des: "New arrival clothes"
     },
@@ -25,13 +25,19 @@ const productDetails = [{
         imageUrl: "",
         heading: "T-Shirt",
         des: "New arrival Puma T-shirts"
+    },
+    {
+        name: "Adidas Track- paint",
+        price: 2999,
+        imageUrl: "",
+        heading: "T-Shirt",
+        des: "New arrival Puma T-shirts"
     }
 ];
 
 
 const cartDetails = [];
 
-//click events {
 function addItem(event) {
     let btnClicked =
         event.parentElement.parentElement.parentElement.parentElement.parentElement;
@@ -98,6 +104,9 @@ function qtyChange(event, handler) {
             let productBtn = name.parentElement.parentElement.getElementsByClassName(
                 "qty-change")[
                 0];
+
+            console.log(productBtn, 'Testing');
+
             cartDetails.forEach((item, i) => {
                 if (itemName == item.name) {
                     if (handler == "add" && item.qty < 10) {
@@ -196,9 +205,7 @@ function QtyBtn(qty = 1) {
   <button class='btn-qty' onclick="qtyChange(this,'add')"><i class='fas fa-chevron-right'></i></button>
 </div>`;
 }
-//}
 
-//Ui components {
 function Product(product = {}) {
     let { name, price, imageUrl, heading, des } = product;
     return `
@@ -322,9 +329,7 @@ function OrderConfirm() {
   <button onclick='okay(event)' class='btn-ok'>okay</button>
 </div>`;
 }
-//}
 
-//updates Ui components {
 function DisplayProducts() {
     let products = productDetails.map(product => {
         return Product(product);
@@ -388,7 +393,6 @@ function App() {
   ${Banner()}
 </div>`;
 }
-//}
 
 // injects the rendered component's html
 document.getElementById("app").innerHTML = App();
