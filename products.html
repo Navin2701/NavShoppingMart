@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body onload="commFunction()">
     <div class="container">
         <div class="navbar">
             <div class="logo">
@@ -22,7 +22,17 @@
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <script>
+                        var timeLogin = localStorage.getItem('isLogin');
+                        console.log("session login", + timeLogin)
+                        if (timeLogin == "1") {
+                            document.write('<li class="logout"><span onclick="logout();">Logout</span></li>');
+                        } else {
+                            document.write('<li><a href="login.html">Login</a></li>');
+
+                        }
+                    </script>
+                    <!-- <li><a href="login.html">Login</a></li> -->
                 </ul>
             </nav>
             <a href="javascript:void(0);">
@@ -90,6 +100,7 @@
         }
     </script>
     <script src="./cart.js "></script>
+    <script src="./login.js "></script>
 </body>
 
 </html>

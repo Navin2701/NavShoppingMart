@@ -11,17 +11,10 @@
     <link rel="stylesheet" href="style.css" />
 
     <script type="text/javascript" language="javascript" src="login.js"></script>
-    <script>
-        function validateLogin() {
-            // alert(isLogin);
-            var checkLogin = localStorage.getItem('isLogin');
-
-            console.log("this is index :::" + checkLogin);
-        }
-    </script>
+    
 </head>
 
-<body onload="validateLogin()">
+<body onload="commFunction()">
     <div class="header">
         <div class="container">
             <div class="navbar">
@@ -33,7 +26,17 @@
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <script>
+                            var timeLogin = localStorage.getItem('isLogin');
+                            console.log("session login", + timeLogin)
+                            if (timeLogin == "1") {
+                                document.write('<li class="logout"><span onclick="logout();">Logout</span></li>');
+                            } else {
+                                document.write('<li><a href="login.html">Login</a></li>');
+
+                            }
+                        </script>
+                        <!-- <li><a href="login.html">Login</a></li> -->
                     </ul>
                 </nav>
                 <a href="javascript:void(0);">
@@ -49,7 +52,6 @@
                         var timeLogin = localStorage.getItem('isLogin');
                         var userName = localStorage.getItem('name1');
                         if (timeLogin == "1") {
-
                             document.write("<span><font size=+3 style='color: green;'></span><br/>");
                             var day = new Date();
                             var hr = day.getHours();
@@ -64,19 +66,16 @@
                             }
                             // document.write(userName);
                             document.write("</font>");
-                            // button onclick = "logout();"
-                            // style: "float: right " >
-                            //     Logout < /button>
                         }
                     </script>
                     <h1>
                         Give yourself a new<br /> Style Everyday!
                     </h1>
                     <p>
-                        <h3>
-                            Who we are: We are a updated outfit brand <br /> & it's a perfect place to give yourself a new
-                            <br /> Outfit with our wide range of collections!
-                        </h3>
+                    <h3>
+                        Who we are: We are a updated outfit brand <br /> & it's a perfect place to give yourself a new
+                        <br /> Outfit with our wide range of collections!
+                    </h3>
                     </p>
                 </div>
                 <div class="col-2">

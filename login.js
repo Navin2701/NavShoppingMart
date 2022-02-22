@@ -6,18 +6,18 @@ var pw = document.getElementById('pw');
 function store() {
     localStorage.setItem('name1', name1.value);
     localStorage.setItem('pw', pw.value);
-    localStorage.setItem('isLogin', "1");
-    localStorage.setItem('isLogout', "2");
+
 }
 
 // check if stored data from register-form is equal to entered data in the   login-form
 function check() {
 
     // stored data from the register-form
+    localStorage.setItem('isLogin', "1");
     var storedName = localStorage.getItem('name1');
     var storedPw = localStorage.getItem('pw');
     var isLogin = localStorage.getItem('isLogin');
-    var isLogout = localStorage.getItem('isLogout');
+
 
     // entered data from the login-form
     var userName = document.getElementById('userName');
@@ -40,4 +40,19 @@ function logout() {
     localStorage.removeItem('name1');
     localStorage.removeItem('pw');
     localStorage.removeItem('isLogin');
+    localStorage.removeItem('totalQty');
+    localStorage.removeItem('cartItem');
+    location.reload();
+}
+
+function commFunction() {
+    // alert(isLogin);
+
+    var checkLogin = localStorage.getItem('isLogin');
+    var totalQty = localStorage.getItem('totalQty');
+    var cartItem = localStorage.getItem('cartItem');
+    document.getElementsByClassName("total-qty")[0].innerText = totalQty;
+    console.log("this is index :::" + checkLogin);
+    console.log("totalQty :::" + totalQty);
+    console.log("cartItem :::" + JSON.stringify(cartItem));
 }

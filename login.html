@@ -25,7 +25,17 @@
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="login.html">Login</a></li>
+                        <script>
+                            var timeLogin = localStorage.getItem('isLogin');
+                            console.log("session login", + timeLogin)
+                            if (timeLogin == "1") {
+                                document.write('<li class="logout"><span onclick="logout();">Logout</span></li>');
+                            } else {
+                                document.write('<li><a href="login.html">Login</a></li>');
+
+                            }
+                        </script>
+                        <!-- <li><a href="login.html">Login</a></li> -->
                     </ul>
                 </nav>
                 <a href="javascript:void(0);">
@@ -33,7 +43,6 @@
                         <i class='fas fa-shopping-cart' style='font-size:2rem;'></i>
                     </button>
                     <span class='total-qty'>0</span>
-
                 </a>
             </div>
         </div>

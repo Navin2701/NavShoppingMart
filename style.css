@@ -492,4 +492,6 @@ nav {
   .single-product .product medium-4 columns {
     padding: 0;
   }
-
+  .logout{
+      color: black;
+  }

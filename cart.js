@@ -1,38 +1,38 @@
 const productDetails = [{
-        name: "Red T-Shirt",
-        price: 500,
-        imageUrl: 'https://pixabay.com/photos/t-shirt-red-man-plain-model-1710578/',
-        heading: "T-Shirt",
-        des: "New arrival clothes"
-    },
-    {
-        name: "Black Shoes",
-        price: 1500,
-        imageUrl: "",
-        heading: "Mens Shoes",
-        des: "New arrival shoes"
-    },
-    {
-        name: "Track Paint",
-        price: 4950,
-        imageUrl: "",
-        heading: "Track-paint",
-        des: "comfirtable and easy wash track-paints"
-    },
-    {
-        name: "Puma blue T-shirt",
-        price: 5450,
-        imageUrl: "",
-        heading: "T-Shirt",
-        des: "New arrival Puma T-shirts"
-    },
-    {
-        name: "Adidas Track- paint",
-        price: 2999,
-        imageUrl: "",
-        heading: "T-Shirt",
-        des: "New arrival Puma T-shirts"
-    }
+    name: "Red T-Shirt",
+    price: 500,
+    imageUrl: 'https://pixabay.com/photos/t-shirt-red-man-plain-model-1710578/',
+    heading: "T-Shirt",
+    des: "New arrival clothes"
+},
+{
+    name: "Black Shoes",
+    price: 1500,
+    imageUrl: "",
+    heading: "Mens Shoes",
+    des: "New arrival shoes"
+},
+{
+    name: "Track Paint",
+    price: 4950,
+    imageUrl: "",
+    heading: "Track-paint",
+    des: "comfirtable and easy wash track-paints"
+},
+{
+    name: "Puma blue T-shirt",
+    price: 5450,
+    imageUrl: "",
+    heading: "T-Shirt",
+    des: "New arrival Puma T-shirts"
+},
+{
+    name: "Adidas Track- paint",
+    price: 2999,
+    imageUrl: "",
+    heading: "T-Shirt",
+    des: "New arrival Puma T-shirts"
+}
 ];
 
 
@@ -56,6 +56,7 @@ function addItem(event) {
         qty: 1
     };
 
+    localStorage.setItem('cartItem', cartItem);
     CartItems(cartItem);
     cartDetails.push(cartItem);
     RenderCart();
@@ -385,6 +386,8 @@ function CartItemsTotal() {
     }, 0);
     document.getElementsByClassName("total")[0].innerText = totalPrice;
     document.getElementsByClassName("total-qty")[0].innerText = totalQty;
+    localStorage.setItem('totalQty', totalQty);
+    console.log();
 }
 
 function App() {
